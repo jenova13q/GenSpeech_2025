@@ -189,15 +189,6 @@ assert sub_df["transcription"].astype(int).between(1000, 999999).all()
 
 ## Результаты
 
-**Dev (текст, CER):**
-- Greedy: **~9.86%**
-- + KenLM 3-gram (α=0.7, β=1.0): **~6.12%**
+![](./image.png)
 
-**Dev (цифры, CER; гармонич. среднее inD/ooD):**
-- Greedy + fuzzy denorm: **~17.8%** H-mean
-
-**Kaggle (официальная метрика: CER по цифрам, H-mean):**
-- Greedy — Public: **27.183%**, Private: **29.800%**
-- **+ LM (3-gram, α=0.7, β=1.0)** — Public: **10.944%**, Private: **14.472%**
-
-*Причины разницы dev↔Kaggle: digits-CER строже, а также на Kaggle без LM (CPU) качество ниже; с LM улучшается значительно (но проблемы с ```No module named 'kenlm'```).*
+*Kaggle без LM (CPU) качество ниже; с LM улучшается значительно (но проблемы с ```No module named 'kenlm'``` не получилось победить на кагле).*
