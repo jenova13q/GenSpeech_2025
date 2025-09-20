@@ -25,7 +25,7 @@
   ![wer_vs_beam](./wer_vs_beam.png)
 
 - Время декодирования vs beam_width  
-  ![time_vs_beam](.time_vs_beam.png)
+  ![time_vs_beam](./time_vs_beam.png)
 
 - Теплокарты WER для beam_lm  
   ![heatmap_beam_lm](./heatmap_beam_lm.png)
@@ -46,4 +46,5 @@
 Для улучшения можно попробовать:
 - более крупную LM (4- или 5-грамму),
 - увеличенный beam_width,
+
 - другие методы рескоринга (например, BERT LM).
